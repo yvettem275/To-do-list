@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To-Do List</h1>
+    <div class="tabs">
+      <button class="tab-button" onclick="openTab('addItem')">Add Item</button>
+      <button class="tab-button" onclick="openTab('todoTasks')">To-Do Tasks</button>
+      <button class="tab-button" onclick="openTab('completedTasks')">Completed</button>
+    </div>
+    <div id="addItem" class="tab-content">
+      <input type="text" id="taskInput" placeholder="Add a new task">
+      <button onclick="addTask()">Add</button>
+    </div>
+    <div id="todoTasks" class="tab-content">
+      <input type="text" id="searchInput" placeholder="Search tasks" onkeyup="filterTasks()">
+      <ul id="taskList"></ul>
+    </div>
+    <div id="completedTasks" class="tab-content">
+      <ul id="completedList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
